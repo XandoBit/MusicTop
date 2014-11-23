@@ -1,5 +1,5 @@
 =========
-----------Sistemas y Tecnologías Web  --------
+----------Proyecto SYTW---------
 =========
 ![Logo de proyecto](http://www.portadastimeline.com/wp-content/uploads/2012/07/musica-portada-para-facebook.jpg "Logo de proyecto")
 =========
