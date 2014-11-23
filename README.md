@@ -1,7 +1,7 @@
 =========
 ----------Sistemas y Tecnologías Web  --------
 =========
-![Logo de prac6](http://www.comunicacionvisible.com/wp-content/uploads/2014/01/app.jpg "Logo de prac6")
+![Logo de proyecto](http://www.portadastimeline.com/wp-content/uploads/2012/07/musica-portada-para-facebook.jpg "Logo de proyecto")
 =========
 Proyecto : MusicTop
 ---------
