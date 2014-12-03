@@ -85,15 +85,12 @@
 				  <p class="bg-danger">Debes introducir un nombre de usuario o contraseña!</p>
 			   <% end %>
 			</div>
- <!-----------------------------formulario login-->
-			<form action="/" method="POST" name="input" role="form">
-			   <div class="form-group">
-				  <label for="name"></label>
-				  <input id="name" name="name" type="text" class="form-control" placeholder="Username"></input>
-				 <input id="pass1" name="pass1" type="password" class="form-control" placeholder="Contraseña"></input>
-			   </div>
-			   <input class="btn btn-info" id="enter" type="submit" value="Click para ir al chat."></input>
-			</form>
+ <!-----------------------------formulario login-->        
+			<% form_tag :action => 'form' do %>
+			<p>Nombre:
+			<% text_fiel_tag 'nombre_usuario,' @nombre %></p>
+			<% submit_tag 'Login' %>
+			<% end %>
 		 </div>
 	  </div>
    </div>
