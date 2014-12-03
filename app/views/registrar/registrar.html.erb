@@ -24,7 +24,7 @@
       <script src= "/javascripts/chat.js"></script>
 
    </head>
-   < body >
+   <body>
   <div class="navbar navbar-inverse navbar-fixed-top scrollclass">
    <div class="container">
 	  <div class="navbar-header">
@@ -33,7 +33,7 @@
 			   <span class="icon-bar"></span>
 			   <span class="icon-bar"></span>
 		 </button>
-		 <a class="navbar-brand" href="/bienvenido/index">MusicTop</a>
+	 <a class="navbar-brand" href="/bienvenido/index">MusicTop</a>
 	  </div>
 	  <div class="navbar-collapse collapse">
 		 <ul class="nav navbar-nav navbar-right">
@@ -59,10 +59,11 @@
    <div class="overlay">
 	  <div class="container">
 		 <div class="col-md-8 pad-top scrollclass">
-			<h1><align="center"><strong><mark>Lista Grupos</strong></align></h1>
+			<h1><align="center"><strong><mark>Bienvenido a MusicTop</strong></align></h1>
 			   <p class="home-p">
-				 Lista de Grupos de MusicTop.
-				 <br>
+				  Sumérgete en nuestra aplicación introduciendo tus datos en el formulario de Login.
+				  <br><mark>-Username.</mark>
+				   <br><mark>-Contraseña.</mark><br>
 			   </p>
 
 		 </div>
@@ -72,14 +73,23 @@
 </div>
 
 
- <!-----------------------------parte adicional-->
+ <!-----------------------------parte formulario login-->
 <section id="skill-sec">
    <div class="overlay">
 	  <div class="container">
 		 <div class="row text-center">
-		 	<h2><strong><mark>Grupos</strong></h2>
+		 	<h2><strong><mark>rRegistrar</strong></h2>
+			<div id="warning-message" style="color:red">
+ <!-----------------------------condiciones-->
+			   <% if @repeat == true %>
+				  <p class="bg-danger">El username ya está registrado en MusicTop, elije otro!</p>
+			   <% end %>
+			   <% if @blanco == true %>
+				  <p class="bg-danger">Debes introducir un nombre de usuario o contraseña!</p>
+			   <% end %>
+			</div>
+ <!-----------------------------formulario registrar-->        
 			
-
 		 </div>
 	  </div>
    </div>
