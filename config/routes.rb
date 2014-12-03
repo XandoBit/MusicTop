@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
 
+  get 'ayuda/help'
 
   get 'bienvenido/index'
 
