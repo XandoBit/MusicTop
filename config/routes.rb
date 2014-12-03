@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
 
-
-
+#RUTAS DE LAS PAGINAS DE MUSICTOP
+ get 'bienvenido/index'
  get 'ayuda/help'
  get 'contacto/contacto'
  get 'lista/lista'
- get 'bienvenido/index'
- 
+ get 'grupos/grupos'
 
+ 
+#RUTAS DE POST, GET ALBUM
 resources :album
 
   # The priority is based upon order of creation: first created -> highest priority.
