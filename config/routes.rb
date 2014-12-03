@@ -6,7 +6,8 @@ Rails.application.routes.draw do
  get 'contacto/contacto'
  get 'lista/lista'
  get 'grupos/grupos'
- get'noticias/noticias'
+ get 'noticias/noticias'
+ get 'conciertos/conciertos'
 
 
  
