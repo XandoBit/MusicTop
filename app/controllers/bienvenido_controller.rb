@@ -5,4 +5,5 @@ class BienvenidoController < ApplicationController
   def form
   	@name = Usuario.create({nombre: @nombre})
   	@pass = Usuario.create({contraseña: @contraseña})
+	end
 end
