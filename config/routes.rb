@@ -6,6 +6,8 @@ Rails.application.routes.draw do
  get 'contacto/contacto'
  get 'lista/lista'
  get 'grupos/grupos'
+ get'noticias/noticias'
+
 
  
 #RUTAS DE POST, GET ALBUM
