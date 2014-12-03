@@ -9,6 +9,7 @@ Rails.application.routes.draw do
  get 'noticias/noticias'
  get 'conciertos/conciertos'
  get 'registrar/registrar'
+ get 'usuarios/usuarios'
 
 
  
