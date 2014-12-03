@@ -2,11 +2,13 @@ Rails.application.routes.draw do
 
 
 
-get 'ayuda/help'
+ get 'ayuda/help'
+ get 'contacto/contacto'
+ get 'lista/lista'
+ get 'bienvenido/index'
+ 
 
-
-  get 'bienvenido/index'
-
+resources :album
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
