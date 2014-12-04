@@ -1,0 +1,217 @@
+
+/*====================================
+ Free To Use For Personal And Commercial Usage
+Author: http://binarytheme.com
+ License: Open source - MIT
+ Please visit http://opensource.org/licenses/MIT for more Full Deatils of license.
+ Share Us if You Like our work 
+ Enjoy Our Codes For Free always.
+======================================*/
+
+
+/*=======================================
+    GENERAL STYLES
+==================================================*/
+
+body {
+          font-family:'Open Sans', sans-serif;
+    font-size:14px;
+}
+
+
+.text-center {
+    text-align:center;
+}
+
+p {
+    font-weight:300;
+    line-height:30px;
+    padding-bottom:20px;
+}
+
+.top-margin-low {
+    margin-top:120px;
+}
+
+
+/*=======================================
+    NAVBAR STYLES
+==================================================*/
+.navbar-brand {
+float: left;
+height: 90px;
+padding: 5px 5px 5px 50px;
+font-size: 30px;
+line-height: 60px;
+}
+
+.nav a {
+    color:#ffffff !important;
+}
+.navbar-header a {
+    color:#ffffff !important;
+    padding-right:100px;
+}
+.nav a {
+    color:#ffffff !important;
+}
+.navbar-header a {
+   min-height:90px;
+}
+.navbar-nav > li > a {
+padding-top: 10px;
+padding-bottom: 10px;
+line-height: 20px;
+font-size: 20px;
+padding-top: 50px!important;
+}
+/*=======================================
+    BLOG STYLES
+==================================================*/
+.jumbotron {
+background-color: #F3F3F3;
+}
+
+
+.links a {
+    padding:10px;
+    font-size:14px;
+    font-weight:300;
+}
+.cat {
+    margin-top:20px;
+     margin-bottom:20px;
+}
+.cat a {
+    padding:5px;
+    font-size:15px;
+    font-weight:400;
+}
+.txt {
+    font-size:16px;
+     color:#000;
+      line-height:25px;
+      margin-top:20px;
+      text-align:justify;
+}
+/*=======================================
+    ADS STYLES
+==================================================*/
+.ad1 {
+    min-height:100px;
+    background-color:#7999FF;
+}
+.ad2 {
+    min-height:225px;
+    background-color:rgba(94, 221, 64, 0.93);
+}
+.ad3 {
+    min-height:250px;
+    background-color:#C5D1FF;
+}
+.ad4 {
+    min-height:200px;
+    background-color:rgba(252, 64, 101, 1);
+}
+/*=======================================
+    COMPONENTS.CSS ADJUSTMENTS STYLES
+==================================================*/
+
+/* SIDE MENUS STYLES */
+
+
+#cbp-spmenu-s1 {
+    overflow:auto;
+}
+
+#cbp-spmenu-s1>h3 {
+    text-align:right;
+}
+#icon-left {
+    text-align:right;
+}
+
+#showLeftPush {
+    position:fixed;
+    z-index:9999;
+    left:5px;
+    top:20px;
+    color: #fff;
+}
+
+
+.cbp-spmenu-vertical {
+margin-top: 90px;
+}
+.cbp-spmenu a:focus,.cbp-spmenu a:hover {
+    text-decoration:none;
+    background-color:#414040;
+}
+
+.cbp-spmenu a>i {
+    margin-right:25px;
+}
+.cbp-spmenu h3 {
+font-size: 2.9em;
+font-weight: 900;
+color:#fff;
+padding:30px;
+
+}
+
+.cbp-spmenu a {
+display: block;
+color: #fff;
+font-size: 1.1em;
+font-weight: 900;
+}
+.cbp-spmenu-vertical a {
+border-bottom: 1px solid #0C0C0C;
+}
+.cbp-spmenu {
+    background: #2B2A2A;
+    overflow:auto;
+}
+#showLeftPush {
+    cursor:pointer;
+}
+
+/*=======================================
+    FOOTER STYLES
+==================================================*/
+.footer-section {
+    background-color:#000;
+    color:#fff;
+    padding:20px 50px 20px 50px;
+    text-align:right;
+}
+
+
+
+/*=======================================
+    MEDIA QUERIES 
+==================================================*/
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .navbar-brand {
+
+padding: 5px 5px 5px 40px;
+font-size: 20px;
+
+}
+    .navbar-nav > li > a {
+padding-top: 10px;
+font-size: 13px;
+padding-top: 40px!important;
+}
+}
+
+
+
+
+
+
+
+
+
+
