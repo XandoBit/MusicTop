@@ -1,23 +1,36 @@
 
-<h1>Sign up</h1>
 
 <h1>Sign up</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
-      <%= f.label :nombre %>
-      <%= f.string_field :nombre %>
-
-      <%= f.label :email %>
-      <%= f.string_field :email %>
-
-      <%= f.label :pass %>
-      <%= f.string_field :pass %>
+    <%= simple_form_for(@user) do |f| %>
+    <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %></h2>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+      </div>
+    <% end %>
+      <h3>Introduce tu nombre</h3>
+      <%= f.text_field :nombre %>
+      <h3>Introduce tu email</h3>
+     <%= f.text_field :email %>
+     <h3>Introduce tu contraseña</h3>
+      <%= f.text_field :pass %>
+      <h3>Confirma tu contraseña</h3>
+      <%= f.text_field :password_digest %>
+   
+      
+   
+<div class="actions" >
+      <%= f.submit 'Crear mi cuenta en MusicTop' %>
+    </div>
+    <% end %>
 
    
-
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
-    <% end %>
   </div>
 </div>

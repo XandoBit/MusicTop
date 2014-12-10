@@ -2,13 +2,15 @@ Rails.application.routes.draw do
 
 
 #RUTAS usuarios
-  get 'users/new'
-  post 'users/new'
+
+  match '/signup',to:'users#create' ,via:'post'
+  
+  get 'users/create'
+  post 'users/create'
 
   get 'users/index'
 
-  get 'users/create'
-   post 'users/create'
+
 
   get 'users/destroy'
 
