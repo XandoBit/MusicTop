@@ -1,5 +1,43 @@
 Rails.application.routes.draw do
 
+
+#RUTAS usuarios
+  get 'users/new'
+  post 'users/new'
+
+  get 'users/index'
+
+  get 'users/create'
+   post 'users/create'
+
+  get 'users/destroy'
+
+  get 'users/show'
+
+ 
+
+#RUTAS cds
+
+  get 'album/index'
+
+  get 'album/new'
+
+  get 'album/create'
+
+  get 'album/show'
+
+  get 'album/edit'
+
+  get 'album/update'
+
+  get 'album/destroy'
+
+#RUTAS formularios
+  get 'formularios/form_get'
+
+  get 'formularios/form_post'
+  post 'formularios/form_post'
+
 #RUTAS DE LAS PAGINAS DE MUSICTOP
  get 'bienvenido/index'
  get 'ayuda/help'
@@ -9,12 +47,13 @@ Rails.application.routes.draw do
  get 'noticias/noticias'
  get 'conciertos/conciertos'
  get 'registrar/registrar'
- get 'usuarios/usuarios'
+ 
 
 
  
 #RUTAS DE POST, GET ALBUM
 resources :album
+resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

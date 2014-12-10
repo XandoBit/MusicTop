@@ -3,7 +3,7 @@ class BienvenidoController < ApplicationController
   def index
   end
   def form
-  	@name = Usuario.create({nombre: @nombre})
-  	@pass = Usuario.create({contraseña: @contraseña})
+  	@name = User.create({nombre: @nombre})
+  	@pass = User.create({contraseña: @contraseña})
 	end
 end
