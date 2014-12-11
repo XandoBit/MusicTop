@@ -4,25 +4,22 @@ class UsersController < ApplicationController
 
 
   def new
+
   	@user = User.new
-    end
  
+ end
 
   def create
    
-  	@user = User.new(params[:user])    # Not the final implementation!
- 
-    if @user.save
-    	flash[:success] = "Bienvenido MusicTop!"
-       redirect_to users_url ,notice: "creadooo correctamentee"
-      
-    else
-      render action:'new'
-    end
+  	@user = User.new(params[:user].permit(:nombre,:email,:pass,:password_digest))    # Not the final implementation!
+    @user.save
+    redirect_to users_show_path
+    
   end
 
 
   def index
+     @user = User.order("nombre")
   end
 
   def destroy
@@ -31,14 +28,11 @@ class UsersController < ApplicationController
 
   def show
   	
-  	 @user = User.order("nombre")
+  	 @users = User.order("nombre")
 
 	
 
   end
 
-   private
-    def user_params
-      params.require(:user).permit(:nombre,:email,:pass,:password_digest)
-    end
+  
 end

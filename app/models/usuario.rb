@@ -1,10 +1,12 @@
 class Usuario < ActiveRecord::Base
-
+ attr_accessible :name, :email, :pass, :password_digest
 attr_accessor :nombre
-attr_accessor :contraseña
+attr_accessor :pass
+attr_accessor :email
+attr_accessor :password_digest
 
  validates :nombre,  presence: true, length: { maximum: 50 }
- validates :contraseña, presence: true, length: { maximum: 255 }
+ validates :pass, presence: true, length: { maximum: 255 }
 
 
 

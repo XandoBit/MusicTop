@@ -3,11 +3,11 @@ Rails.application.routes.draw do
 
 #RUTAS usuarios
 
-  match '/signup',to:'users#create' ,via:'post'
-  
-  get 'users/create'
-  post 'users/create'
 
+  
+  
+  post 'users/create' => 'users#create'
+get '/signup' => 'users#new'
   get 'users/index'
 
 
@@ -55,7 +55,7 @@ Rails.application.routes.draw do
  
 #RUTAS DE POST, GET ALBUM
 resources :album
-resources :users
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -63,7 +63,7 @@ resources :users
   # You can have the root of your site routed with "root"
   root :to => 'bienvenido#index'
   
-
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
