@@ -7,27 +7,20 @@ Rails.application.routes.draw do
   post 'users/create' => 'users#create'
   get '/signup' => 'users#new'
   get 'users/index'
-
   get 'users/destroy'
-
   get 'users/show'
+  get 'users/edit'
 
  
 
 #RUTAS cds
 
   get 'album/index'
-
   get 'album/new'
-
   get 'album/create'
-
   get 'album/show'
-
   get 'album/edit'
-
   get 'album/update'
-
   get 'album/destroy'
 
 #RUTAS formularios
