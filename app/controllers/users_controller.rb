@@ -16,6 +16,7 @@ class UsersController < ApplicationController
       redirect_to users_show_path
       else
       redirect_to users_new_path
+    end
     
   end
 
@@ -30,7 +31,8 @@ class UsersController < ApplicationController
   end
 
   def show
-  	 @users = User.all
+     
+  	 @users =User.order(:nombre)
   end
 
   def edit
