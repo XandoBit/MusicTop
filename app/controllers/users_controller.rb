@@ -5,15 +5,17 @@ class UsersController < ApplicationController
 
   def new
 
-  	@user = User.new
+  	  @user = User.new
  
  end
 
   def create
    #fallaba con accr_accesor
-  	@user = User.new(params[:user].permit(:nombre,:email,:pass,:password_digest))   
-    @user.save
-    redirect_to users_show_path
+  	  @user = User.new(params[:user].permit(:nombre,:email,:pass,:password_digest))   
+      if @user.save
+      redirect_to users_show_path
+      else
+      redirect_to users_new_path
     
   end
 
@@ -23,16 +25,23 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find(params[:id]).destroy
+      User.find(params[:id]).destroy
   end
 
   def show
-  	 @user = params[:nombre]
   	 @users = User.all
-
-	
-
   end
 
+  def edit
+
+      @user=User.find(params[:id])
+  end
+
+  def update
+      @user=User.find(params[:id])
+      if @user.update_attributes(params[:user].permit(:nombre,:email,:pass,:password_digest))
+          redirect_to users_show_path
+      else
+          redirect_to users_edit_path
   
 end
