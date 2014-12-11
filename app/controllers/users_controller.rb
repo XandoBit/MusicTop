@@ -10,8 +10,8 @@ class UsersController < ApplicationController
  end
 
   def create
-   
-  	@user = User.new(params[:user].permit(:nombre,:email,:pass,:password_digest))    # Not the final implementation!
+   #fallaba con accr_accesor
+  	@user = User.new(params[:user].permit(:nombre,:email,:pass,:password_digest))   
     @user.save
     redirect_to users_show_path
     
@@ -27,8 +27,8 @@ class UsersController < ApplicationController
   end
 
   def show
-  	
-  	 @users = User.order("nombre")
+  	 @user = params[:nombre]
+  	 @users = User.all
 
 	
 
