@@ -3,14 +3,10 @@ Rails.application.routes.draw do
 
 #RUTAS usuarios
 
-
-  
   
   post 'users/create' => 'users#create'
-get '/signup' => 'users#new'
+  get '/signup' => 'users#new'
   get 'users/index'
-
-
 
   get 'users/destroy'
 
@@ -48,7 +44,7 @@ get '/signup' => 'users#new'
  get 'grupos/grupos'
  get 'noticias/noticias'
  get 'conciertos/conciertos'
- get 'registrar/registrar'
+
  
 
 
