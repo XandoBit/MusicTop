@@ -33,6 +33,7 @@ class UsersController < ApplicationController
   def show
      
   	 @users =User.order(:nombre)
+     puts ''
   end
 
   def edit
