@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'users/destroy'
   get 'users/show'
   get 'users/edit'
+  post 'users/update'
+
 
  
 

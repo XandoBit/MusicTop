@@ -26,6 +26,7 @@ class UsersController < ApplicationController
 
   def destroy
       User.find(params[:id]).destroy
+      redirect_to users_show_path
   end
 
   def show
@@ -33,7 +34,6 @@ class UsersController < ApplicationController
   end
 
   def edit
-
       @user=User.find(params[:id])
   end
 
@@ -50,7 +50,7 @@ class UsersController < ApplicationController
 
      def user_params
    #fallaba con accr_accesor
-      params.require(:user).permit(:nombre,:email,:pass,:password_digest))   
+      params.require(:user).permit(:nombre,:email,:pass,:password_digest)
 
     end
 end
