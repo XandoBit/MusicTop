@@ -19,8 +19,7 @@ Red social dedicada a la compartición de enlaces de música, con las lista de m
 ### Enlace de: Heroku
 [Ir a App en Heroku](https://MusicTop.herokuapp.com/)
 
-### Enlace de: Travis
-[![Build Status](https://travis-ci.org/XandoBit/MusicTop.svg?branch=master)](https://travis-ci.org/XandoBit/MusicTop)
+
 
 ### Enlace de Coveralls
 [![Coverage Status](https://coveralls.io/repos/XandoBit/MusicTop/badge.png)](https://coveralls.io/r/XandoBit/MusicTop)
