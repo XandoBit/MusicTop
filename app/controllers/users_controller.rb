@@ -32,10 +32,6 @@ class UsersController < ApplicationController
 
   def show
       @user = User.order("nombre")
-
-      User.find_each do |user|
-
-     end
 	
   end
 
