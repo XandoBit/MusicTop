@@ -31,9 +31,12 @@ class UsersController < ApplicationController
   end
 
   def show
-     
-  	 @users =User.order(:nombre)
-     puts ''
+      @user = User.order("nombre")
+
+      User.find_each do |user|
+
+     end
+	
   end
 
   def edit

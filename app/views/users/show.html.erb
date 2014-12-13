@@ -108,15 +108,18 @@
                         <strong>Lista de Usuarios de MusicTop</strong>
                     </div>
                     
-
-                       <%= @users.each do |userx| %>
-  						<br>
+                      <%=  User.find_each do |user| %>
+                      
   						
-						<p>-Nombre: <%= userx[:nombre] %></p>
-						<p>-Email: <%= userx[:email] %></p>
+  		
+						<p><strong>-Nombre:</strong> <%= user.nombre%></p>
+                        <p><strong>-Email: </strong><%= user.email%></p>
+                        <br></br>
+                        <br>
+
+                        <% end %>
 						
-						<%end%>
-<p>akiiii sale el registro all entero</p>
+                   
                     
                   
 						
