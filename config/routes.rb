@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
 
+
+
+  post 'usuario_sessions/create' => 'usuario_sessions#create'
+  get '/login' => 'usuario_sessions#new'
+   get '/logout' => 'usuario_sessions#destroy'
 #RUTAS usuarios
 
   
@@ -46,6 +51,8 @@ Rails.application.routes.draw do
  
 #RUTAS DE POST, GET ALBUM
 resources :album
+resources :usuario_sessions
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
