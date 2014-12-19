@@ -2,10 +2,18 @@ Rails.application.routes.draw do
 
 
 
+#RUTAS usuarios sessions login y logout
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
 
+
+#pruebas
   post '/login' => 'usuario_sessions#create'
   get '/login' => 'usuario_sessions#new'
    get '/logout' => 'usuario_sessions#destroy'
+
+
 #RUTAS usuarios
 
   
