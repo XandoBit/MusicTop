@@ -12,8 +12,7 @@ class UserarioSessionsController < ApplicationController
   def create
 
   	  if @user = login(params[:nombre],params[:pass])   
-       redirect_to (users_show_path, message: "login OK")
-      else  
+       redirect_to users_show_path
 
          flash.now[:alert] = "algo salio mal "
          render action: :new
@@ -26,10 +25,27 @@ class UserarioSessionsController < ApplicationController
 
   def destroy
       logout
-      redirect_to (:users_show_path, message: "logged out")
+      redirect_to users_show_path
   end
 
- 
+  def show
+      @user = User.order("nombre")
+	
+  end
+
+  def edit
+      @user=User.find(params[:id])
+  end
+
+  def update
+      @user=User.find(params[:id])
+      if @user.update_attributes(user_params)
+          redirect_to users_show_path
+      else
+          redirect_to users_edit_path
+      end
+  end
+
   private
 
      def user_params
