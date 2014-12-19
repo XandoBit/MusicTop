@@ -106,7 +106,7 @@
             <div class="col-md-6 top-margin">
                 <div class="panel panel-primary">
                     <div class="panel-heading black-back">
-                        <p align=center><strong >Registrate en MusicTop </strong></p>
+                        <p align=center><strong >Login en MusicTop </strong></p>
                     </div>
                     <div class="panel-body ">
 
@@ -114,7 +114,7 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for @user, url:{action:"create"} do |f| %>
+    <%= form_for @user do |f| %>
      <% if @user.errors.any? %>
   <div id="error_explanation">
     <div class="alert alert-danger">
@@ -136,8 +136,9 @@
       <%= f.password_field :pass, class: 'form-control' %>
 
       <br></br>
-
+  <div class="actions">
       <%= f.submit "Haz login en MusicTop", class: "btn btn-primary" %>
+  </div>
     <% end %>
   </div>
 </div>

@@ -1,4 +1,4 @@
-class UserarioSessionsController < ApplicationController
+class UsuarioSessionsController < ApplicationController
   
 
 

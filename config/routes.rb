@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
 
 
-  post 'usuario_sessions/create' => 'usuario_sessions#create'
+  post '/login' => 'usuario_sessions#create'
   get '/login' => 'usuario_sessions#new'
    get '/logout' => 'usuario_sessions#destroy'
 #RUTAS usuarios
