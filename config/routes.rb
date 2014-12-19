@@ -9,9 +9,7 @@ Rails.application.routes.draw do
 
 
 #pruebas
-  post '/login' => 'usuario_sessions#create'
-  get '/login' => 'usuario_sessions#new'
-   get '/logout' => 'usuario_sessions#destroy'
+
 
 
 #RUTAS usuarios
