@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
      redirect_to users_show_path
       # Log the user in and redirect to the user's show page.
     else
-      flash = 'Invalido nombre o contraseña '
+      flash.now[:danger] = 'Invalido nombre o contraseña '
       render 'new'
     end
    end

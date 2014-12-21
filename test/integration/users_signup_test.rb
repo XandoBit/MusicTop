@@ -6,7 +6,9 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_no_difference 'User.count' do
       post users_path, user: { nombre:  "",
                                email: "user@invalid",
-                               pass:              "foo" }
+                               pass:              "xxxxxx",
+                               password_digest:   "xxxxxx",
+                           }
     end
     assert_template 'users/new'
   end
