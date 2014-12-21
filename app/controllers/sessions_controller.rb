@@ -1,17 +1,19 @@
 class SessionsController < ApplicationController
+  
   def new
   end
 
-   def create
+  def create
 
-    if users = User.find_by(nombre: params[:session][:nombre].downcase)
+    if users = User.find_by(nombre: params[:session][:nombre].downcase,pass: params[:session][:pass].downcase)
      redirect_to users_show_path
       # Log the user in and redirect to the user's show page.
     else
-      flash[:danger] = 'Invalido nombre o contraseña '
+      flash = 'Invalido nombre o contraseña '
       render 'new'
     end
-  end
+   end
+
 
   def destroy
   end
