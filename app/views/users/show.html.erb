@@ -107,7 +107,9 @@
                     <div class="panel-heading black-back">
                         <strong>Lista de Usuarios de MusicTop</strong>
                     </div>
-                    
+
+                    <%= link_to "Profile", user_path(current_user) %>
+                    <%= current_user.nombre %>
                       <%=  User.find_each do |user| %>
                       
   						
