@@ -76,14 +76,22 @@
             <div class="col-md-3 top-margin">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                       Click & Roll
+                       Datos de tu perfil
                        
 
                     </div>
                     <div class="panel-body ">
                         <div class="ad1">
-                            <img src="
-                            http://www.festivalmueca.com/wp-content/uploads/2014/04/CLICK-AND-ROLL.jpg" width="230px" height="250px" alt="Click&roll">
+                             <br>
+                            <li>
+                            Nombre: <%= current_user.nombre %>
+                        </li>
+                      
+                            <br></br>
+                              <li>
+
+                      Email: <%= current_user.email %>
+                  </li>
                         </div>
                     </div>
                 </div>
@@ -108,8 +116,8 @@
                         <strong>Lista de Usuarios de MusicTop</strong>
                     </div>
 
-                    <%= link_to "Profile", user_path(current_user) %>
-                    <%= current_user.nombre %>
+
+                    
                       <%=  User.find_each do |user| %>
                       
   						
