@@ -54,7 +54,8 @@
 	
 			
 			
-			<li><a href="/users/show">Usuarios</a></li>
+		<% if logged_in? %>
+            <li><a href="/users/show">Usuarios</a></li>
             <li><a href="/album/album">CDs</a></li>
             <li><a href="/grupos/grupos">Grupos</a></li>
             <li><a href="/noticias/noticias">Noticias</a></li>
@@ -62,7 +63,15 @@
             <li><a href="/lista/lista">Lista</a></li>
             <li><a href="/contacto/contacto">Contacto</a></li>
             <li><a href="/ayuda/help">Ayuda</a></li>
+            <li><a href="/logout">Logout/a></li>
+
+
+            <% else %>
+            <li><a href="/login">Login</a></li>     
+            <li><a href="/contacto/contacto">Contacto</a></li>
+            <li><a href="/ayuda/help">Ayuda</a></li>
             <li><a href="/signup">Registrarse</a></li>
+             <% end %>
 			
 		 </ul>
 	  </div>
