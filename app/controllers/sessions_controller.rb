@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 
 
   def destroy
-  	log_out
+  	log_out 
     redirect_to '/signup'
   end
 end
