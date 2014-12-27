@@ -36,12 +36,13 @@ class UsersController < ApplicationController
   end
 
   def edit
-      @user=User.find(params[:id])
+      @user=User.find_by(params[:id])
   end
 
   def update
       @user=User.find(params[:id])
       if @user.update_attributes(user_params)
+          flash[:success] = "Perfil cambiado"
           redirect_to users_show_path
       else
           redirect_to users_edit_path
