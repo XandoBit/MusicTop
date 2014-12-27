@@ -68,11 +68,15 @@
               Cuenta <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><a href="/users/edit">editar</a></li>
+              <li><a href="/users/edit" ><font color="black">
+     
+                Editar mi perfil</font></a></li>
 
               <li class="divider"></li>
               <li>
-              <a href="/logout">Logout/a></li>
+              <a href="/logout"><font color="black">
+     
+                Logout</font></a></li>
              
             </ul>
           </li>
@@ -143,7 +147,7 @@
                       <%=  User.find_each do |user| %>
                       
   						
-  		
+  		                
 						<p><strong>-Nombre:</strong> <%= user.nombre%></p>
                         <p><strong>-Email: </strong><%= user.email%></p>
                         <br></br>
