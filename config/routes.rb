@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get 'users/index'
   get 'users/destroy'
   get 'users/show'
-  get 'users/edit'
+  get 'users/edit'=> 'users#edit'
   post 'users/update'
 
 

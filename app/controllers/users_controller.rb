@@ -13,6 +13,8 @@ class UsersController < ApplicationController
    #fallaba con accr_accesor
   	  @user = User.new(params[:user].permit(:nombre,:email,:pass,:password_digest))   
       if @user.save
+      log_in @user
+       flash[:success] = "Bienvenido a MusicTop!"
       redirect_to users_show_path
       else
       redirect_to users_new_path
