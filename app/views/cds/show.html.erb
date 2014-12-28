@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Grupo:</strong>
+  <%= @cd.grupo %>
+</p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @cd.titulo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @cd.descripcion %>
+</p>
+
+<p>
+  <strong>Enlace:</strong>
+  <%= @cd.enlace %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @cd.fecha %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @cd.user %>
+</p>
+
+<%= link_to 'Edit', edit_cd_path(@cd) %> |
+<%= link_to 'Back', cds_path %>

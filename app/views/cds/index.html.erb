@@ -1,0 +1,35 @@
+<h1>Listing cds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Grupo</th>
+      <th>Titulo</th>
+      <th>Descripcion</th>
+      <th>Enlace</th>
+      <th>Fecha</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cds.each do |cd| %>
+      <tr>
+        <td><%= cd.grupo %></td>
+        <td><%= cd.titulo %></td>
+        <td><%= cd.descripcion %></td>
+        <td><%= cd.enlace %></td>
+        <td><%= cd.fecha %></td>
+        <td><%= cd.user %></td>
+        <td><%= link_to 'Show', cd %></td>
+        <td><%= link_to 'Edit', edit_cd_path(cd) %></td>
+        <td><%= link_to 'Destroy', cd, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cd', new_cd_path %>
