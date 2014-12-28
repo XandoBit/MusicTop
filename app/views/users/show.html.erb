@@ -116,7 +116,9 @@
                               <li>
 
                       Email: <%= current_user.email %>
-                  </li>
+                                </li>
+
+                               
                         </div>
                     </div>
                 </div>
@@ -142,7 +144,8 @@
                     </div>
 
 
-                    
+                   
+
                       <%=  User.find_each do |user| %>
                       
   						
@@ -151,8 +154,14 @@
                         <p><strong>-Email: </strong><%= user.email%></p>
                         <br></br>
                         <br>
+                                 <% if current_user.admin? && !current_user?(:user) %>
+    |                            <%= link_to "delete",user, method: :delete, data: { confirm: "¿estas seguro?" } %>
+                                 <% end %>
 
                         <% end %>
+
+
+                        
 						
                    
                     

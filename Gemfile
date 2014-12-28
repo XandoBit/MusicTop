@@ -15,6 +15,11 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 gem 'bcrypt-ruby', '3.1.2'
 
+gem 'faker', '1.4.2'
+
+gem 'will_paginate',           '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
+
 gem 'simple_form'
 gem 'rails-footnotes','~> 3.7.9', :group => :development
 gem 'bootstrap-sass','~> 2.3.1.0'
