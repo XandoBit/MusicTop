@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141228225404) do
+ActiveRecord::Schema.define(version: 20141228232644) do
+
+  create_table "cds", force: true do |t|
+    t.string   "grupo"
+    t.string   "titulo"
+    t.text     "descripcion"
+    t.text     "enlace"
+    t.date     "fecha"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "cds", ["user_id", "created_at"], name: "index_cds_on_user_id_and_created_at"
+  add_index "cds", ["user_id"], name: "index_cds_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "nombre"

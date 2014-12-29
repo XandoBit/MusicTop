@@ -10,5 +10,6 @@ class CreateCds < ActiveRecord::Migration
 
       t.timestamps
     end
+     add_index :cds, [:user_id, :created_at]
   end
 end
