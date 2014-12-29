@@ -36,4 +36,8 @@ class CdTest < ActiveSupport::TestCase
     @cd.titulo = "   "
     assert_not @cd.valid?
   end
+
+  test "order should be most recent first" do
+    assert_equal Cd.first, cds(:most_recent)
+  end
 end
