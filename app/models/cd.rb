@@ -1,5 +1,11 @@
 class Cd < ActiveRecord::Base
   belongs_to :user
+  default_scope -> { order(created_at: :desc) }
   validates :user_id, presence: true
-  validates :descrpcion, presence: true, length: { maximum: 300}
-end
+   validates :grupo, presence: true
+    validate :titulo, presence: true
+  validates :descripcion, presence: true, length: { maximum: 300}
+   validate :enlace, presence: true
+    validate :fecha, presence: true
+     
+  end

@@ -10,6 +10,7 @@ class CdsController < ApplicationController
   # GET /cds/1
   # GET /cds/1.json
   def show
+    @cd = Cd.order("created_at")
   end
 
   # GET /cds/new
@@ -24,7 +25,7 @@ class CdsController < ApplicationController
   # POST /cds
   # POST /cds.json
   def create
-    @cd = Cd.new(cd_params)
+    @cd = Cd.new(params[:cd].permit(:grupo,:titulo,:descripcion,:enlace,:fecha, :user_id))   
 
     respond_to do |format|
       if @cd.save
@@ -64,7 +65,7 @@ class CdsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_cd
-      @cd = Cd.find(params[:id])
+      @cd = Cd.find_by(params[:titulo])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
