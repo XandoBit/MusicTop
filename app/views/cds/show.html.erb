@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+   <%=  Cd.find_each do |cd| %>
+                      
 <p>
   <strong>Grupo:</strong>
   <%= @cd.grupo %>
@@ -29,6 +30,8 @@
   <strong>User:</strong>
   <%= @cd.user %>
 </p>
+
+<% end %>
 
 <%= link_to 'Edit', edit_cd_path(@cd) %> |
 <%= link_to 'Back', cds_path %>

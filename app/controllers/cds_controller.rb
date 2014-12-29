@@ -10,7 +10,7 @@ class CdsController < ApplicationController
   # GET /cds/1
   # GET /cds/1.json
   def show
-    @cd = Cd.order("created_at")
+    @cds = Cd.all
   end
 
   # GET /cds/new
