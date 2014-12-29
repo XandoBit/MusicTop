@@ -10,7 +10,7 @@ class CdsController < ApplicationController
   # GET /cds/1
   # GET /cds/1.json
   def show
-    @cds = Cd.all
+    @cds = Cd.find(params[:id])
   end
 
   # GET /cds/new
