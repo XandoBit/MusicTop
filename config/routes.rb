@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   resources :cds
 
+
+  
+
 #RUTAS usuarios sessions login y logout
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
