@@ -1,37 +1,228 @@
-<p id="notice"><%= notice %></p>
-   <%=  Cd.find_each do |cd| %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>MusicTop - Cds </title>   
+    <!--REQUIRED STYLE SHEETS-->
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="assets/stylesheets/noticias/bootstrap-noticias.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLE CSS -->
+    <link href="assets/stylesheets/noticias/font-awesome-noticias.min.css" rel="stylesheet" />
+    <!--ANIMATED FONTAWESOME STYLE CSS -->
+    <link href="assets/stylesheets/noticias/font-awesome-animation-noticias.css" rel="stylesheet" />
+    <!-- SIDE MENU STYLE CSS -->
+    <link href="assets/stylesheets/noticias/component-noticias.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="assets/stylesheets/noticias/style-noticias.css" rel="stylesheet" />
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="cbp-spmenu-push">
+
+
+    
+    <!--NAVBAR-->
+
+  <div class="navbar navbar-inverse navbar-fixed-top scrollclass">
+   <div class="container">
+    <div class="navbar-header">
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+     </button>
+   <a class="navbar-brand" href="/bienvenido/index">MusicTop</a>
+    </div>
+    <div class="navbar-collapse collapse">
+     <ul class="nav navbar-nav navbar-right">
+  
+      
+      
+    <% if logged_in? %>
+            <li><a href="/users/show">Usuarios</a></li>
+            <li><a href="/album/album">CDs</a></li>
+            <li><a href="/grupos/grupos">Grupos</a></li>
+            <li><a href="/noticias/noticias">Noticias</a></li>
+            <li><a href="/conciertos/conciertos">Conciertos</a></li>
+            <li><a href="/lista/lista">Lista</a></li>
+            <li><a href="/contacto/contacto">Contacto</a></li>
+            <li><a href="/ayuda/help">Ayuda</a></li>
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Cuenta <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/users/edit" ><font color="black">
+     
+                Editar mi perfil</font></a></li>
+
+              <li class="divider"></li>
+              <li>
+              <a href="/logout"><font color="black">
+     
+                Logout</font></a></li>
+             
+            </ul>
+          </li>
+
+
+            <% else %>
+            <li><a href="/login">Login</a></li>     
+            <li><a href="/contacto/contacto">Contacto</a></li>
+            <li><a href="/ayuda/help">Ayuda</a></li>
+            <li><a href="/signup">Registrarse</a></li>
+             <% end %>
+      
+     </ul>
+    </div>
+   </div>
+</div>
+    <!--END NAVBAR-->
+    
+    <div class="container ">
+        <!--Blog Start-->
+        <div class="row top-margin-low">
+            <!--Categories and other -->
+            
+            <!--End Categories and other -->
+            <!--Blog Listing-->
+            <div class="col-md-6 top-margin">
+                <div class="panel panel-primary">
+                    <div class="panel-heading black-back">
+                        <strong>Enlaces de Cds de MusicTop</strong>
+                    </div>
+                    <div class="panel-body ">
+                       
+                       
+                      <p id="notice"><%= notice %></p>
+  
                       
-<p>
-  <strong>Grupo:</strong>
-  <%= @cd.grupo %>
-</p>
+                          <p>
+                            <strong>Grupo:</strong>
+                            <%= @cd.grupo %>
+                          </p>
 
-<p>
-  <strong>Titulo:</strong>
-  <%= @cd.titulo %>
-</p>
+                          <p>
+                            <strong>Titulo:</strong>
+                            <%= @cd.titulo %>
+                          </p>
 
-<p>
-  <strong>Descripcion:</strong>
-  <%= @cd.descripcion %>
-</p>
+                          <p>
+                            <strong>Descripcion:</strong>
+                            <%= @cd.descripcion %>
+                          </p>
 
-<p>
-  <strong>Enlace:</strong>
-  <%= @cd.enlace %>
-</p>
+                          <p>
+                            <strong>Enlace de descarga:</strong>
+                            <%= @cd.enlace %>
+                          </p>
 
-<p>
-  <strong>Fecha:</strong>
-  <%= @cd.fecha %>
-</p>
+                          <p>
+                            <strong>Fecha:</strong>
+                            <%= @cd.fecha %>
+                          </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @cd.user %>
-</p>
+                          <p>
+                            <strong>Usuario:</strong>
+                            <%= @cd.user %>
+                          </p>
 
-<% end %>
 
-<%= link_to 'Edit', edit_cd_path(@cd) %> |
-<%= link_to 'Back', cds_path %>
+                          <%= link_to 'Edit', edit_cd_path(@cd) %> |
+                          <%= link_to 'Back', cds_path %>
+
+                      
+
+
+
+
+                    </div>
+                </div>
+               
+            </div>
+            <!--Blog Listing-->
+            <!--Categories and other -->
+           
+            <!--End Categories and other -->
+
+
+        </div>
+        <!--Blog end-->
+
+
+    </div>
+    <!-- /.container -->
+    <!--Footer -->
+
+    <div class="col-md-12 top-margin footer-section">
+        &copy; 2014 | &nbsp; All Rights Reserved | &nbsp; Adán Rafael López Lecuona
+    </div>
+    <!--Footer end -->
+
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY  -->
+    <script src="assets/plugins/jquery-noticias-1.10.2.js"></script>
+    <!-- BOOTSTRAP CORE SCRIPT   -->
+    <script src="assets/plugins/bootstrap-noticias.js"></script>
+    <!-- SIDE MENU SCRIPTS -->
+    <script src="assets/javascripts/noticias/modernizr-noticias.custom.js"></script>
+    <script src="assets/javascripts/noticias/classie-noticias.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="assets/javascripts/noticias/custom-noticias.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
