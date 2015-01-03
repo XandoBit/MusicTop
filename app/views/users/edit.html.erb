@@ -114,7 +114,7 @@
 
                     <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for @user, url:{action:"update"}  do |f| %>
+    <%= form_for @current_user, url:{action:"update"}  do |f| %>
      
       <h3>Introduce tu nombre nuevo</h3>
       <%= f.text_field :nombre %>
@@ -124,6 +124,8 @@
       <%= f.text_field :pass %>
        <h3>Introduce tu contraseña de nuevo</h3>
       <%= f.text_field :password_digest %>
+
+
    
       
    
@@ -131,6 +133,8 @@
       <%= f.submit 'Guardar Cambios' %>
     </div>
     <% end %>
+
+    <%= link_to 'Ir atrás', users_show_path %>
 
    
   </div>

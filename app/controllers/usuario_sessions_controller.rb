@@ -14,7 +14,7 @@ class UsuarioSessionsController < ApplicationController
   	  if @user = login(params[:nombre],params[:pass])   
        redirect_to users_show_path
 
-         flash.now[:alert] = "algo salio mal "
+        
          render action: :new
       end
     
@@ -38,7 +38,7 @@ class UsuarioSessionsController < ApplicationController
   end
 
   def update
-      @user=User.find(params[:id])
+      @user=User.find(params[:nombre])
       if @user.update_attributes(user_params)
           redirect_to users_show_path
       else

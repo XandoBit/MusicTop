@@ -29,7 +29,7 @@ class CdsController < ApplicationController
 
     respond_to do |format|
       if @cd.save
-        format.html { redirect_to @cd, notice: 'Cd was successfully created.' }
+        format.html { redirect_to @cd, notice: 'El CD fue creado correctamente.' }
         format.json { render :show, status: :created, location: @cd }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class CdsController < ApplicationController
   def update
     respond_to do |format|
       if @cd.update(cd_params)
-        format.html { redirect_to @cd, notice: 'Cd was successfully updated.' }
+        format.html { redirect_to @cd, notice: 'El Cd fue modificado correctamente.' }
         format.json { render :show, status: :ok, location: @cd }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class CdsController < ApplicationController
   def destroy
     @cd.destroy
     respond_to do |format|
-      format.html { redirect_to cds_url, notice: 'Cd was successfully destroyed.' }
+      format.html { redirect_to cds_url, notice: 'El Cd fue eliminado correctamente.' }
       format.json { head :no_content }
     end
   end

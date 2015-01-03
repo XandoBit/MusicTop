@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
      log_in users
       # Log the user in and redirect to the user's show page.
     else
-      flash.now[:danger] = "Invalido nombre o contraseña "
+     
       render 'new'
     end
    end

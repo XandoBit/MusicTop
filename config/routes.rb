@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   get 'users/destroy'
   get 'users/show'
   get 'users/edit'=> 'users#edit'
-  post 'users/update'
+  post 'users/update' => 'users#update'
 
 
  
@@ -62,7 +62,7 @@ Rails.application.routes.draw do
 
  
 #RUTAS DE POST, GET ALBUM
-resources :album
+resources :users
 resources :usuario_sessions
 
 

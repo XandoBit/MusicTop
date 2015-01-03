@@ -46,7 +46,23 @@
       <li><a href="/conciertos/conciertos">Conciertos</a></li>
       <li><a href="/contacto/contacto">Contacto</a></li>
       <li><a href="/ayuda/help">Ayuda</a></li>
-      <li><a href="/logout">Logout/a></li>
+      <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Cuenta <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/users/edit" ><font color="black">
+     
+                Editar mi perfil</font></a></li>
+
+              <li class="divider"></li>
+              <li>
+              <a href="/logout"><font color="black">
+     
+                Logout</font></a></li>
+             
+            </ul>
+          </li>
 
 
       <% else %>
