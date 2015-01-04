@@ -25,7 +25,7 @@ class CdsController < ApplicationController
   # POST /cds
   # POST /cds.json
   def create
-    @cd = Cd.new(params[:cd].permit(:grupo,:titulo,:descripcion,:enlace,:fecha, :user_id))   
+    @cd = Cd.new(params[:cd].permit(:grupo,:titulo,:descripcion,:enlace,:fecha, :user_id, :puntuacion))   
 
     respond_to do |format|
       if @cd.save
@@ -70,6 +70,6 @@ class CdsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cd_params
-      params.require(:cd).permit(:grupo, :titulo, :descripcion, :enlace, :fecha, :user_id)
+      params.require(:cd).permit(:grupo, :titulo, :descripcion, :enlace, :fecha, :user_id, :puntuacion)
     end
 end

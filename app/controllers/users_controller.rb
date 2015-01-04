@@ -25,7 +25,13 @@ class UsersController < ApplicationController
 
 
   def index
-     @user = User.order("nombre")
+    if params[:search]
+      @user = User.find_by(:all, :conditions => ['nombre LIKE ?',
+                                                "%#{params[:search]}%"])
+    else
+      @user = User.order("nombre")
+    end
+     
   end
 
   def destroy
@@ -35,7 +41,13 @@ class UsersController < ApplicationController
   end
 
   def show
+     
+      if params[:search]
+      @user = User.find_by(:all, :conditions => ['nombre LIKE ?',
+                                                "%#{params[:search]}%"])
+    else
       @user = User.order("nombre")
+    end
 	
   end
 

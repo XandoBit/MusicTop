@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141228232644) do
+ActiveRecord::Schema.define(version: 20150104024755) do
 
   create_table "cds", force: true do |t|
     t.string   "grupo"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20141228232644) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "puntuacion"
   end
 
   add_index "cds", ["user_id", "created_at"], name: "index_cds_on_user_id_and_created_at"
@@ -35,6 +36,7 @@ ActiveRecord::Schema.define(version: 20141228232644) do
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
     t.boolean  "admin"
+    t.integer  "puntuacion"
   end
 
   create_table "usuarios", force: true do |t|

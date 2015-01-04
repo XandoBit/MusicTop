@@ -140,13 +140,15 @@
                             <%= @cd.fecha %>
                           </p>
 
-                          <p>
-                            <strong>Usuario:</strong>
-                            <%= @cd.user[:nombre] %>
+                          
+                            <strong>Puntuacion</strong>
+                            <%= @cd.puntuacion.round(2) %>
                           </p>
 
+<% if association :user %>
+                          <%= usr 'Edit', edit_cd_path(@cd) %>
 
-                          <%= link_to 'Edit', edit_cd_path(@cd) %> |
+                        <% end %> |
                           <%= link_to 'Back', cds_path %>
 
                       

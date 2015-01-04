@@ -121,13 +121,16 @@
 						    <%= f.input :titulo %>
 						    <%= f.input :descripcion %>
 						    <%= f.input :enlace %>
+                             <%= f.input :puntuacion %>
 						    <%= f.input :fecha %>
+
+                            <%= f.association :user %>
 						  
 						  </div>
 
 						  <div class="form-actions">
 						    <%= f.button :submit %>
-                           
+
 						  </div>
 						<% end %>
 

@@ -12,6 +12,7 @@ class UsuarioSessionsController < ApplicationController
   def create
 
   	  if @user = login(params[:nombre],params[:pass])   
+       message: "Bienvendo"
        redirect_to users_show_path
 
         
