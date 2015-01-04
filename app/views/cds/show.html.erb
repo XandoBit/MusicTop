@@ -129,8 +129,10 @@
                           </p>
 
                           <p>
-                            <strong>Enlace de descarga:</strong>
-                            <%= @cd.enlace %>
+                            <strong>Enlace de descarga:</strong> <a>
+                                  <%= @cd.enlace %>
+                                </a>
+                           
                           </p>
 
                           <p>
@@ -140,7 +142,7 @@
 
                           <p>
                             <strong>Usuario:</strong>
-                            <%= @cd.user %>
+                            <%= @cd.user[:nombre] %>
                           </p>
 
 

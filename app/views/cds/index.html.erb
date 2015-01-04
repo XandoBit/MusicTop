@@ -119,7 +119,7 @@
                             <th><td>Titulo</td></th>
                             <th></th><th></th>
                             <th><td>Fecha</td></th>
-                            <th></th>
+                            <th></th><th></th>
                             <th><td>Opciones</td></th>
 
                             <th colspan="1"></th>
@@ -139,11 +139,13 @@
                                <th></th><th></th>
                                <th><td><%= cd.fecha %></td> </th>
                               <th></th> <th>
+                              <th>
 
                                <td><%= link_to 'Ver', cd %></td>
+                               <% if @current_user %>
                               <td><%= link_to 'Editar', edit_cd_path(cd) %></td>
                               <td><%= link_to 'Borrar', cd, method: :delete, data: { confirm: '¿Estas seguro de borrarlo?' } %></td></th>
-
+                              <% end %>
                             </tr>
                            
 
